@@ -1,17 +1,68 @@
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import '../global.css';
 
 import { Stack } from 'expo-router';
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: 'intro',
 };
 
+import {
+  useFonts as useKhand,
+  Khand_300Light,
+  Khand_400Regular,
+  Khand_500Medium,
+  Khand_600SemiBold,
+  Khand_700Bold,
+} from '@expo-google-fonts/khand';
+
+import {
+  useFonts as useHind,
+  Hind_300Light,
+  Hind_400Regular,
+  Hind_500Medium,
+  Hind_600SemiBold,
+  Hind_700Bold,
+} from '@expo-google-fonts/hind';
+
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
+
+SplashScreen.preventAutoHideAsync();
+
 export default function RootLayout() {
+  const [khandLoaded] = useKhand({
+    Khand_300Light,
+    Khand_400Regular,
+    Khand_500Medium,
+    Khand_600SemiBold,
+    Khand_700Bold,
+  });
+
+  const [hindLoaded] = useHind({
+    Hind_300Light,
+    Hind_400Regular,
+    Hind_500Medium,
+    Hind_600SemiBold,
+    Hind_700Bold,
+  });
+
+  const fontsLoaded = khandLoaded && hindLoaded;
+
+  useEffect(() => {
+    if (fontsLoaded) SplashScreen.hideAsync();
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-    </Stack>
+    <SafeAreaProvider>
+      <Stack>
+        {/* Intro Landing Page */}
+        <Stack.Screen name="intro" options={{ headerShown: false }} />
+
+        {/*TABS */}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      </Stack>
+    </SafeAreaProvider>
   );
 }

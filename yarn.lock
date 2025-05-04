@@ -801,6 +801,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
+"@expo-google-fonts/hind@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/hind/-/hind-0.3.0.tgz#5ede0b1ea70da9f39dee828f81dece7d0e7f1f8f"
+  integrity sha512-kd/ncjoMilofJ1krtB1zGfjzMwCrDMw19F7ZEiNzgSONRFJq+agOaEXLkX3iqAUcwDqbT0lznJCCM3VfKh8QVg==
+
+"@expo-google-fonts/khand@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/khand/-/khand-0.3.0.tgz#e8c1681b3a37a52c059fcb780e1f3df3173e6f96"
+  integrity sha512-w1hrax14+mYQNsY/j+FOexBocYlcCTsUYWkTKPYBZ7E7oTe69W2tG8hCgHQmigMH7nOA97O0SWyJ0q1nkv2g5A==
+
 "@expo/cli@0.24.11":
   version "0.24.11"
   resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.24.11.tgz#a200b5b63c909fe72ded0d3cfcf971f84c0f346a"
@@ -3786,6 +3796,11 @@ expo-font@~13.3.1:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-image@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-2.1.6.tgz#f046fa631768e37326cc14c49de9113ceffa9e8b"
+  integrity sha512-AFQxeAI1iTXFZ4dMxUB+SOACGMQxEk+t7PvT3j4mrvffRFoOLfHZ4uJc8SAdDFJak7ByqKhCIPIEhL+1Deq4Sg==
+
 expo-keep-awake@~14.1.4:
   version "14.1.4"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-14.1.4.tgz#80197728563e0e17523e5a606fbd6fbed9639503"
@@ -3838,6 +3853,13 @@ expo-router@~5.0.3:
     semver "~7.6.3"
     server-only "^0.0.1"
     shallowequal "^1.1.0"
+
+expo-splash-screen@~0.30.8:
+  version "0.30.8"
+  resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-0.30.8.tgz#2e960ccff053bc8ace85eb56f7d6745e4ddfc6b6"
+  integrity sha512-2eh+uA543brfeG5HILXmtNKA7E2/pfywKzNumzy3Ef6OtDjYy6zJUGNSbhnZRbVEjUZo3/QNRs0JRBfY80okZg==
+  dependencies:
+    "@expo/prebuild-config" "^9.0.5"
 
 expo-status-bar@~2.2.3:
   version "2.2.3"
