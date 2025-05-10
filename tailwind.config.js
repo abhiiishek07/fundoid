@@ -20,6 +20,9 @@ module.exports = {
       },
       colors: {
         primary: '#2563EB',
+        greyBg: '#F5F5F5',
+        greyBorder: '#E5E5E5',
+        greyText: '#777',
       },
     },
   },

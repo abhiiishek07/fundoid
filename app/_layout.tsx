@@ -4,7 +4,7 @@ import '../global.css';
 import { Stack } from 'expo-router';
 
 export const unstable_settings = {
-  initialRouteName: 'intro',
+  initialRouteName: '(auth)/index',
 };
 
 import {
@@ -57,8 +57,8 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <Stack>
-        {/* Intro Landing Page */}
-        <Stack.Screen name="intro" options={{ headerShown: false }} />
+        {/* AUTH */}
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
 
         {/*TABS */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
