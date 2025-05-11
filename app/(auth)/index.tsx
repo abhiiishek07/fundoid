@@ -25,7 +25,7 @@ const IntroScreen = () => {
 
         <View className="mt-5 flex flex-col gap-5">
           <Link
-            href="/(tabs)/events"
+            href="/(auth)/join-org"
             className="rounded-lg bg-primary py-4 text-center font-secondary-semibold text-xl  text-white">
             Join Organization
           </Link>

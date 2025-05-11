@@ -4,23 +4,19 @@ import * as Yup from 'yup';
 
 import Input from '../ui/Input';
 
-const CreateOrgForm = () => {
+const ExistingMemberForm = () => {
   const formik = useFormik({
     initialValues: {
-      orgName: '',
       orgUsername: '',
       email: '',
       password: '',
-      fullName: '',
     },
     validationSchema: Yup.object({
-      orgName: Yup.string().required('Organization Name is required'),
       orgUsername: Yup.string().required('Organization Username is required'),
       email: Yup.string().email('Invalid email format').required('Email is required'),
       password: Yup.string()
         .min(6, 'Password must be at least 6 characters')
         .required('Password is required'),
-      fullName: Yup.string().required('Full Name is required'),
     }),
     onSubmit: (values) => {
       console.log(values);
@@ -31,16 +27,8 @@ const CreateOrgForm = () => {
   return (
     <View className="flex  flex-col gap-5 px-1">
       <Input
-        label="Organization Name"
-        placeholder="Your organization's full name"
-        value={formik.values.orgName}
-        onChangeText={formik.handleChange('orgName')}
-        isRequired
-        error={formik.errors.orgName}
-      />
-      <Input
         label="Organization ID"
-        placeholder="Enter unique ID (e.g. myorg123)"
+        placeholder="Enter your organization Id"
         value={formik.values.orgUsername}
         onChangeText={formik.handleChange('orgUsername')}
         isRequired
@@ -64,33 +52,16 @@ const CreateOrgForm = () => {
         error={formik.errors.password}
         secureTextEntry
       />
-      <Input
-        label="Confirm Password"
-        placeholder="Enter password (minimum 6 characters)"
-        value={formik.values.password}
-        onChangeText={formik.handleChange('password')}
-        isRequired
-        error={formik.errors.password}
-        secureTextEntry
-      />
-      <Input
-        label="Full Name"
-        placeholder="Enter your full name"
-        value={formik.values.fullName}
-        onChangeText={formik.handleChange('fullName')}
-        isRequired
-        error={formik.errors.fullName}
-      />
 
       <TouchableOpacity
         className="mt-3 rounded-lg bg-primary py-4"
         onPress={formik.handleSubmit as (e?: GestureResponderEvent) => void}>
         <Text className="text-center font-secondary-semibold text-lg uppercase text-white">
-          Create Organization
+          Join
         </Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default CreateOrgForm;
+export default ExistingMemberForm;

@@ -4,17 +4,15 @@ import * as Yup from 'yup';
 
 import Input from '../ui/Input';
 
-const CreateOrgForm = () => {
+const NewMemberForm = () => {
   const formik = useFormik({
     initialValues: {
-      orgName: '',
       orgUsername: '',
       email: '',
       password: '',
       fullName: '',
     },
     validationSchema: Yup.object({
-      orgName: Yup.string().required('Organization Name is required'),
       orgUsername: Yup.string().required('Organization Username is required'),
       email: Yup.string().email('Invalid email format').required('Email is required'),
       password: Yup.string()
@@ -31,16 +29,8 @@ const CreateOrgForm = () => {
   return (
     <View className="flex  flex-col gap-5 px-1">
       <Input
-        label="Organization Name"
-        placeholder="Your organization's full name"
-        value={formik.values.orgName}
-        onChangeText={formik.handleChange('orgName')}
-        isRequired
-        error={formik.errors.orgName}
-      />
-      <Input
         label="Organization ID"
-        placeholder="Enter unique ID (e.g. myorg123)"
+        placeholder="Enter your organization Id"
         value={formik.values.orgUsername}
         onChangeText={formik.handleChange('orgUsername')}
         isRequired
@@ -57,7 +47,7 @@ const CreateOrgForm = () => {
       />
       <Input
         label="Password"
-        placeholder="Enter password (minimum 6 characters)"
+        placeholder="Enter your password"
         value={formik.values.password}
         onChangeText={formik.handleChange('password')}
         isRequired
@@ -66,7 +56,7 @@ const CreateOrgForm = () => {
       />
       <Input
         label="Confirm Password"
-        placeholder="Enter password (minimum 6 characters)"
+        placeholder="Enter your password"
         value={formik.values.password}
         onChangeText={formik.handleChange('password')}
         isRequired
@@ -86,11 +76,11 @@ const CreateOrgForm = () => {
         className="mt-3 rounded-lg bg-primary py-4"
         onPress={formik.handleSubmit as (e?: GestureResponderEvent) => void}>
         <Text className="text-center font-secondary-semibold text-lg uppercase text-white">
-          Create Organization
+          Enter
         </Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default CreateOrgForm;
+export default NewMemberForm;
