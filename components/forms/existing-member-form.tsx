@@ -3,8 +3,10 @@ import { GestureResponderEvent, Text, TouchableOpacity, View } from 'react-nativ
 import * as Yup from 'yup';
 
 import Input from '../ui/Input';
+import { useRouter } from 'expo-router';
 
 const ExistingMemberForm = () => {
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
       orgUsername: '',
@@ -21,6 +23,7 @@ const ExistingMemberForm = () => {
     onSubmit: (values) => {
       console.log(values);
       formik.resetForm();
+      router.push('/(tabs)/events');
     },
   });
 
@@ -57,7 +60,7 @@ const ExistingMemberForm = () => {
         className="mt-3 rounded-lg bg-primary py-4"
         onPress={formik.handleSubmit as (e?: GestureResponderEvent) => void}>
         <Text className="text-center font-secondary-semibold text-lg uppercase text-white">
-          Join
+          Join Organization
         </Text>
       </TouchableOpacity>
     </View>

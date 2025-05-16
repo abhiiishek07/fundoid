@@ -3,8 +3,10 @@ import { GestureResponderEvent, Text, TouchableOpacity, View } from 'react-nativ
 import * as Yup from 'yup';
 
 import Input from '../ui/Input';
+import { useRouter } from 'expo-router';
 
 const CreateOrgForm = () => {
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
       orgName: '',
@@ -25,6 +27,7 @@ const CreateOrgForm = () => {
     onSubmit: (values) => {
       console.log(values);
       formik.resetForm();
+      router.push('/(tabs)/events');
     },
   });
 

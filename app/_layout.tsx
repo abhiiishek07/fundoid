@@ -8,24 +8,25 @@ export const unstable_settings = {
 };
 
 import {
-  useFonts as useKhand,
   Khand_300Light,
   Khand_400Regular,
   Khand_500Medium,
   Khand_600SemiBold,
   Khand_700Bold,
+  useFonts as useKhand,
 } from '@expo-google-fonts/khand';
 
 import {
-  useFonts as useHind,
   Hind_300Light,
   Hind_400Regular,
   Hind_500Medium,
   Hind_600SemiBold,
   Hind_700Bold,
+  useFonts as useHind,
 } from '@expo-google-fonts/hind';
 
 import * as SplashScreen from 'expo-splash-screen';
+
 import { useEffect } from 'react';
 
 SplashScreen.preventAutoHideAsync();
@@ -54,13 +55,14 @@ export default function RootLayout() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
+
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider className="bg-red-100">
       <Stack>
         {/* AUTH */}
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
 
-        {/*TABS */}
+        {/* TABS */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
     </SafeAreaProvider>
