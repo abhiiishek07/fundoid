@@ -23,6 +23,7 @@ module.exports = {
         greyBg: '#F5F5F5',
         greyBorder: '#E5E5E5',
         greyText: '#777',
+        background: '#F9FAFB',
       },
     },
   },

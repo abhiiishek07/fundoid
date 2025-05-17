@@ -71,11 +71,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="account"
         options={{
-          title: 'Profile',
+          title: 'Account',
           headerTitle: () => (
-            <Text className="font-primary-semibold text-3xl uppercase text-black">Profile</Text>
+            <Text className="font-primary-semibold text-3xl uppercase text-black">Account</Text>
           ),
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
