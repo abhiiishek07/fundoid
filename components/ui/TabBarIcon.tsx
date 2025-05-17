@@ -5,11 +5,11 @@ export const TabBarIcon = (props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) => {
-  return <FontAwesome size={20} style={styles.tabBarIcon} {...props} />;
+  return <FontAwesome size={16} style={styles.tabBarIcon} {...props} />;
 };
 
 export const styles = StyleSheet.create({
   tabBarIcon: {
-    marginBottom: -5,
+    marginBottom: -0,
   },
 });

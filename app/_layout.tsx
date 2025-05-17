@@ -57,7 +57,7 @@ export default function RootLayout() {
   if (!fontsLoaded) return null;
 
   return (
-    <SafeAreaProvider className="bg-red-100">
+    <SafeAreaProvider>
       <Stack>
         {/* AUTH */}
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
