@@ -25,10 +25,6 @@ export default function TabLayout() {
           fontFamily: 'Hind_600SemiBold',
         },
         tabBarStyle: {
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
           elevation: 0,
           backgroundColor: 'white',
           borderTopWidth: 1,
@@ -55,6 +51,9 @@ export default function TabLayout() {
             <View className="flex h-full items-center justify-center p-2">{props.children}</View>
           </TouchableWithoutFeedback>
         ),
+        contentStyle: {
+          paddingBottom: Platform.OS === 'ios' ? 85 : 80,
+        },
       })}>
       <Tabs.Screen
         name="events"
@@ -66,7 +65,9 @@ export default function TabLayout() {
           ),
           tabBarIcon: ({ color, focused }) => (
             <View
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${focused ? 'bg-primary/10' : ''}`}>
+              className={`flex h-8 w-8 items-center justify-center rounded-full ${
+                focused ? 'bg-primary/10' : ''
+              }`}>
               <TabBarIcon name="calendar" color={color} />
             </View>
           ),
@@ -82,7 +83,9 @@ export default function TabLayout() {
           ),
           tabBarIcon: ({ color, focused }) => (
             <View
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${focused ? 'bg-primary/10' : ''}`}>
+              className={`flex h-8 w-8 items-center justify-center rounded-full ${
+                focused ? 'bg-primary/10' : ''
+              }`}>
               <TabBarIcon name="microphone" color={color} />
             </View>
           ),
@@ -98,7 +101,9 @@ export default function TabLayout() {
           ),
           tabBarIcon: ({ color, focused }) => (
             <View
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${focused ? 'bg-primary/10' : ''}`}>
+              className={`flex h-8 w-8 items-center justify-center rounded-full ${
+                focused ? 'bg-primary/10' : ''
+              }`}>
               <TabBarIcon name="building" color={color} />
             </View>
           ),
@@ -114,7 +119,9 @@ export default function TabLayout() {
           ),
           tabBarIcon: ({ color, focused }) => (
             <View
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${focused ? 'bg-primary/10' : ''}`}>
+              className={`flex h-8 w-8 items-center justify-center rounded-full ${
+                focused ? 'bg-primary/10' : ''
+              }`}>
               <TabBarIcon name="user" color={color} />
             </View>
           ),

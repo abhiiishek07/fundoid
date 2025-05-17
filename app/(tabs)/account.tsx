@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const Profile = () => {
   return (
-    <ScrollView className="h-full w-full bg-background" showsVerticalScrollIndicator={false}>
+    <ScrollView className="h-full w-full  bg-background" showsVerticalScrollIndicator={false}>
       <LinearGradient colors={['#4F46E5', '#7C3AED']} className="px-5 pb-10 pt-12">
         <View className="items-center">
           <View className="relative">
@@ -82,8 +82,8 @@ const Profile = () => {
           <Text className="font-primary-semibold text-lg text-red-600">Log Out</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className="mt-4 flex-row items-center justify-center gap-3 rounded-xl border border-red-600 bg-red-50 p-4 active:bg-red-100">
-          <Ionicons name="trash" size={24} color="#dc2626" />
+        <TouchableOpacity className="mt-4 flex-row items-center justify-center gap-3 rounded-xl p-4 active:bg-red-100">
+          <Ionicons name="trash" size={20} color="#dc2626" />
           <Text className="font-primary-semibold text-lg text-red-600">Delete Account</Text>
         </TouchableOpacity>
       </View>

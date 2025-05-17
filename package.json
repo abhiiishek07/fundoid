@@ -31,6 +31,7 @@
     "firebase": "^10.5.2",
     "formik": "^2.4.6",
     "lucide-react-native": "^0.511.0",
+    "moti": "^0.30.0",
     "nativewind": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
