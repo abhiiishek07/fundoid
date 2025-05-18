@@ -113,8 +113,8 @@ const Organization = () => {
       </View>
 
       <View className="mt-3 flex-1">
-        <View className="flex-1 rounded-t-3xl bg-white p-5">
-          <View className="mb-6 flex-row items-center justify-between">
+        <View className="flex-1 rounded-t-3xl bg-white px-5">
+          <View className="my-4 flex-row items-center justify-between">
             <View>
               <Text className="font-primary-semibold text-2xl text-gray-900">Members</Text>
               <Text className="mt-1 font-secondary-regular text-base text-greyText">
@@ -131,7 +131,7 @@ const Organization = () => {
             data={organizationData.employees}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item, index }) => <EmployeeCard employee={item} index={index} />}
-            contentContainerClassName="pb-10"
+            contentContainerClassName=""
             showsVerticalScrollIndicator={false}
             ItemSeparatorComponent={() => <View className="h-2" />}
           />
